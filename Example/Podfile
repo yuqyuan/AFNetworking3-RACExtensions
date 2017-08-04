@@ -6,8 +6,5 @@ target 'AFNetworking3-RACExtensions_Example' do
 
   target 'AFNetworking3-RACExtensions_Tests' do
     inherit! :search_paths
-
-    pod 'Specta'
-  pod 'Expecta'
   end
 end

@@ -17,13 +17,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/yuqyuan/AFNetworking3-RACExtensions.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '7.0'
-  s.default_subspecs = 'NSURLSession'
 
-#  s.source_files = 'AFNetworking3-RACExtensions/Classes/**/*'
-
+  s.dependency 'AFNetworking/NSURLSession', '3.0.0'
+  s.dependency 'ReactiveCocoa', '~> 2.0'
+  s.source_files = 'AFNetworking3-RACExtensions/Classes/AFHTTPSessionManager+RACSupport.{h,m}'
   s.subspec 'NSURLSession' do |ss|
-    ss.dependency 'AFNetworking', '3.0'
-    ss.dependency 'ReactiveCocoa', '~> 2.0'
-    ss.source_files = 'AFNetworking3-RACExtensions/Classes/AFHTTPSessionManager+RACSupport.{h,m}'
   end
 end
